@@ -1,0 +1,75 @@
+.skills {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &-desc {
+    margin-top: 15rem;
+    margin-bottom: 50rem;
+    max-width: 700rem;
+    text-align: center;
+  }
+
+  &-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 40rem;
+    padding: 0;
+    list-style: none;
+    align-items: end;
+    justify-content: center;
+    width: 100%;
+    max-width: 600rem;
+
+    > *:last-child:nth-child(4n + 1) {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20rem;
+  }
+
+  @include tablet {
+    &-desc {
+      max-width: 500rem;
+    }
+  }
+
+  @include mobile {
+    &-wrap {
+      gap: 20rem;
+      max-width: 460rem;
+    }
+
+    &-img {
+      max-width: 40rem;
+    }
+  }
+
+  @include mobile-small {
+    &-img {
+      max-width: 30rem;
+    }
+
+    &-wrap {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      max-width: 340rem;
+
+      > *:last-child:nth-child(4n + 1) {
+        grid-column: auto;
+        justify-self: stretch;
+      }
+
+      > *:last-child:nth-child(3n + 1) {
+        grid-column: 1 / -1;
+        justify-self: center;
+      }
+    }
+  }
+}

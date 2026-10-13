@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="img/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="siteHeader">
+      <div class="container navbar">
+        <a class="logo" href="/"><img src="img/icons/logo.svg" alt="Logo" /></a>
+        <nav class="nav">
+          <div
+            class="nav-backdrop"
+            id="headerBackdrop"
+            onclick="navToggle()"
+          ></div>
+          <ul class="nav-list" id="headerUl">
+            <li>
+              <a class="nav-link _current" href="./" onclick="navToggle()">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="about-me/" onclick="navToggle()">
+                About Me
+              </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="my-works/" onclick="navToggle()">
+                My Works
+              </a>
+            </li>
+          </ul>
+          <button class="burger" id="headerBurger" onclick="navToggle()">
+            <span class="burger-box">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+            </span>
+          </button>
+        </nav>
+
+        <div class="action-wrapper">
+          <a class="btn-primary" href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="intro" id="intro">
+        <!-- PREVIEW SECTION -->
+        <section class="container preview primary">
+          <h1 class="preview-title">Websites Built With Care</h1>
+          <a href="my-works/" class="btn-primary slide-anim">
+            Explore Works
+            <svg
+              width="16"
+              height="12"
+              viewBox="0 0 16 12"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 12L8.6 10.55L12.15 7H0V5H12.15L8.6 1.45L10 0L16 6L10 12Z"
+              />
+            </svg>
+          </a>
+        </section>
+
+        <!-- HERO SECTION -->
+        <section class="container hero secondary">
+          <div class="hero-info">
+            <p class="txt-l">Hello, I'm</p>
+            <h2 class="hero-title">Daryna Pavlenko</h2>
+            <p class="txt-l">Front-end developer</p>
+            <p class="txt-m hero-desc">
+              My journey in web development is driven by a passion for coding
+              and a keen interest in design. <br />
+              I build responsive websites and interfaces with a focus on clean
+              code, thoughtful design, and the details that make a digital
+              experience feel polished.
+            </p>
+            <button class="btn-secondary" onclick="downloadCV()">
+              Download CV
+            </button>
+          </div>
+
+          <img src="img/developer.png" alt="Developer" class="hero-image" />
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="container services" data-aos="fade-up" data-aos-delay="100">
+          <h2>What I Do</h2>
+          <p class="txt-m services-desc">
+            I build responsive, functional websites with attention to clean code
+            and detail
+          </p>
+          <div class="services-wrap">
+            <div class="services-container">
+              <img
+                src="img/icons/development.svg"
+                alt="Responsive Design"
+                class="services-icon"
+              />
+              <div class="services-info">
+                <h3 class="services-title">
+                  Frontend <br />
+                  Development
+                </h3>
+                <p class="txt-s">
+                  Building functional interfaces with HTML, CSS, JavaScript, and
+                  other frontend tools
+                </p>
+              </div>
+            </div>
+
+            <div class="services-container">
+              <img
+                src="img/icons/responsive.svg"
+                alt="User Experience"
+                class="services-icon"
+              />
+              <div class="services-info">
+                <h3 class="services-title">
+                  Responsive <br />
+                  Design
+                </h3>
+                <p class="txt-s">
+                  Creating layouts that adapt smoothly across desktop, tablet,
+                  and mobile screens
+                </p>
+              </div>
+            </div>
+
+            <div class="services-container">
+              <img
+                src="img/icons/usability.svg"
+                alt="Usability Testing"
+                class="services-icon"
+              />
+              <div class="services-info">
+                <h3 class="services-title">
+                  UI <br />
+                  Implementation
+                </h3>
+                <p class="txt-s">
+                  Turning designs into clean, interactive interfaces while
+                  keeping the visual details consistent.
+                </p>
+              </div>
+            </div>
+
+            <div class="services-container">
+              <img
+                src="img/icons/qa.svg"
+                alt="Quality Assurance"
+                class="services-icon"
+              />
+              <div class="services-info">
+                <h3 class="services-title">
+                  Quality <br />
+                  Assurance
+                </h3>
+                <p class="txt-s">
+                  Testing across browsers and devices to catch bugs before they
+                  reach users
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- PROJECTS SECTION -->
+        <section class="container projects" data-aos="fade-up">
+          <h2>My Projects Highlight</h2>
+          <div class="projects-wrap">
+            <div class="projects-container">
+              <a
+                href="https://sub1.selecart.com.ua/dentaclean/"
+                class="projects-image"
+                target="_blank"
+              >
+                <img
+                  src="img/websites/dentaclean.webp"
+                  alt="Dentaclean Preview"
+                />
+              </a>
+              <h3>DENTACLEAN</h3>
+              <p class="txt-m">Landing page + Form</p>
+
+              <a
+                href="https://sub1.selecart.com.ua/dentaclean/"
+                class="projects-link txt-s"
+                target="_blank"
+                >View Page</a
+              >
+            </div>
+
+            <div class="projects-container">
+              <a
+                href="https://wirbewegen.schule/kooperation/"
+                class="projects-image"
+                target="_blank"
+              >
+                <img
+                  src="img/websites/wirbewegen.webp"
+                  alt="Wir Bewegen Schule Preview"
+                />
+              </a>
+              <h3>Wir Bewegen Schule</h3>
+              <p class="txt-m">Karriereseite page</p>
+
+              <a
+                href="https://wirbewegen.schule/kooperation/"
+                class="projects-link txt-s"
+                target="_blank"
+                >View Page</a
+              >
+            </div>
+          </div>
+
+          <a href="my-works/" class="btn-secondary slide-anim">
+            See More
+            <svg
+              width="16"
+              height="12"
+              viewBox="0 0 16 12"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 12L8.6 10.55L12.15 7H0V5H12.15L8.6 1.45L10 0L16 6L10 12Z"
+              />
+            </svg>
+          </a>
+        </section>
+        <!-- EXPERIENCE SECTION -->
+        <section class="experience" data-aos="fade-up" data-aos-delay="100">
+          <h2>Work Experience</h2>
+          <div class="experience-slider">
+            <div class="experience-track" id="expTrack">
+              <div class="experience-logos" id="expLogosOriginal">
+                <img src="img/companies/goodzone.png" alt="Company 1" />
+                <img src="img/companies/landseiten.png" alt="Company 2" />
+                <img src="img/companies/mmg.png" alt="Company 3" />
+                <img src="img/companies/oceanbluedigital.png" alt="Company 4" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- CONTACT SECTION -->
+        <section class="container contact" data-aos="fade-up" data-aos-delay="100">
+          <h2 id="contact">Let's Get In Touch</h2>
+          <p class="txt-m contact-desc">
+            Open to new opportunities and always happy to connect — send me a
+            message!
+          </p>
+          <div class="contact-container">
+            <div class="contact-info">
+              <img src="img/icons/email.svg" alt="Whatsapp" />
+              <a
+                href="mailto:daryna.pavlenk007@gmail.com"
+                class="txt-s underscore-anim"
+                >daryna.pavlenk007@gmail.com</a
+              >
+            </div>
+            <div class="contact-info">
+              <img src="img/icons/tel.svg" alt="Whatsapp" />
+              <a href="tel:+380988252112" class="txt-s underscore-anim"
+                >+(380)98-8252-112</a
+              >
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a
+              href="https://www.linkedin.com/in/daryna-pavlenko/"
+              target="_blank"
+              ><img
+                src="img/icons/linkedin.svg"
+                alt="Linkedin"
+                class="contact-icon"
+            /></a>
+            <a href="https://github.com/darp314" target="_blank">
+              <img src="img/icons/github.svg" alt="Github" class="contact-icon"
+            /></a>
+            <a href="https://t.me/odrryl" target="_blank">
+              <img
+                src="img/icons/telegram.svg"
+                alt="Telegram"
+                class="contact-icon"
+            /></a>
+            <a href="https://wa.me/+380988252112" target="_blank">
+              <img
+                src="img/icons/whatsapp.svg"
+                alt="Whatsapp"
+                class="contact-icon"
+            /></a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="container footer">
+      <a href="/">
+        <img src="img/icons/logo-full.svg" alt="Logo" />
+      </a>
+      <p class="txt-s footer-copyright">
+        &copy; Copyright <span id="copyright-year"></span>. All Rights Reserved.
+      </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/index.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+.hero-var2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 150rem;
+  gap: 80rem;
+
+  &-desc {
+    margin-top: 15rem;
+  }
+
+  @include tablet {
+    gap: 40rem;
+    padding-bottom: 100rem;
+
+    &-info > * {
+      max-width: 550rem;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 40rem;
+    padding-bottom: 80rem;
+  }
+}

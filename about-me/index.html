@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/img/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="siteHeader">
+      <div class="container navbar">
+        <a class="logo" href="../"
+          ><img src="../img/icons/logo.svg" alt="Logo"
+        /></a>
+        <nav class="nav">
+          <div
+            class="nav-backdrop"
+            id="headerBackdrop"
+            onclick="navToggle()"
+          ></div>
+          <ul class="nav-list" id="headerUl">
+            <li>
+              <a class="nav-link" href="../" onclick="navToggle()"> Home </a>
+            </li>
+
+            <li>
+              <a class="nav-link _current" href="./" onclick="navToggle()">
+                About Me
+              </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="../my-works/" onclick="navToggle()">
+                My Works
+              </a>
+            </li>
+          </ul>
+          <button class="burger" id="headerBurger" onclick="navToggle()">
+            <span class="burger-box">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+            </span>
+          </button>
+        </nav>
+
+        <div class="action-wrapper">
+          <a class="btn-primary" href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="intro" id="intro">
+        <!-- PREVIEW SECTION -->
+        <section class="container secondary-preview primary">
+          <h1>About Me</h1>
+          <p class="txt-m secondary-preview-desc">
+            A junior front-end developer who cares about the details that make a
+            site feel right — clean layouts, smooth interactions, and code that
+            holds up as a project grows.
+          </p>
+          <button class="btn-secondary" onclick="downloadCV()">
+            Download CV
+          </button>
+        </section>
+        <!-- HERO SECTION -->
+        <section class="container hero-var2 secondary">
+          <img src="/img/Developer.png" alt="Developer" class="hero-image" />
+          <div class="hero-info">
+            <h2 class="hero-title">Details make the difference.</h2>
+            <p class="txt-m hero-var2-desc">
+              I focus on responsive, accessible interfaces and clean,
+              maintainable code — and I don't mind getting into the weeds of
+              cross-browser and functional QA to make sure things actually work.
+              <br /><br />
+              Outside of code, I'm usually hiking, drawing, or figuring out
+              something new — turns out debugging and finding the right trail
+              require the same kind of stubborn patience.
+            </p>
+          </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="container skills" data-aos="fade-up" data-aos-delay="100">
+          <h2>Skills</h2>
+          <p class="txt-m skills-desc">
+            These are the tools and technologies I work with most, with a
+            growing focus on React and Vue for building dynamic web interfaces
+          </p>
+
+          <div class="skills-wrap">
+            <div class="skills-container">
+              <img src="/img/icons/html.svg" alt="HTML5" class="skills-img" />
+              <p class="txt-m">HTML5</p>
+            </div>
+            <div class="skills-container">
+              <img src="/img/icons/css.svg" alt="CSS3" class="skills-img" />
+              <p class="txt-m">CSS3</p>
+            </div>
+            <div class="skills-container">
+              <img src="/img/icons/sass.svg" alt="Sass" class="skills-img" />
+              <p class="txt-m">Sass</p>
+            </div>
+            <div class="skills-container">
+              <img
+                src="/img/icons/tailwind.svg"
+                alt="Tailwind"
+                class="skills-img"
+              />
+              <p class="txt-m">Tailwind</p>
+            </div>
+            <!-- line -->
+
+            <div class="skills-container">
+              <img
+                src="/img/icons/js.svg"
+                alt="JavaScript"
+                class="skills-img"
+              />
+              <p class="txt-m">JavaScript</p>
+            </div>
+            <div class="skills-container">
+              <img
+                src="/img/icons/ts.svg"
+                alt="TypeScript"
+                class="skills-img"
+              />
+              <p class="txt-m">TypeScript</p>
+            </div>
+            <div class="skills-container">
+              <img src="/img/icons/react.svg" alt="React" class="skills-img" />
+              <p class="txt-m">React.js</p>
+            </div>
+            <div class="skills-container">
+              <img src="/img/icons/vue.svg" alt="Vue" class="skills-img" />
+              <p class="txt-m">Vue.js</p>
+            </div>
+            <!-- line -->
+
+            <div class="skills-container">
+              <img src="/img/icons/node.svg" alt="Node" class="skills-img" />
+              <p class="txt-m">Node.js</p>
+            </div>
+            <div class="skills-container">
+              <img src="/img/icons/vite.svg" alt="Vite" class="skills-img" />
+              <p class="txt-m">Vite</p>
+            </div>
+            <div class="skills-container">
+              <img src="/img/icons/sql.svg" alt="SQL" class="skills-img" />
+              <p class="txt-m">SQL</p>
+            </div>
+            <div class="skills-container">
+              <img src="/img/icons/git.svg" alt="Git" class="skills-img" />
+              <p class="txt-m">Github</p>
+            </div>
+
+            <!-- line -->
+
+            <div class="skills-container">
+              <img
+                src="/img/icons/wordpress.svg"
+                alt="Wordpress"
+                class="skills-img"
+              />
+              <p class="txt-m">Wordpress</p>
+            </div>
+            <div class="skills-container">
+              <img
+                src="/img/icons/elementor.svg"
+                alt="Elementor"
+                class="skills-img"
+              />
+              <p class="txt-m">Elementor</p>
+            </div>
+            <div class="skills-container">
+              <img src="/img/icons/jest.svg" alt="Jest" class="skills-img" />
+              <p class="txt-m">Jest</p>
+            </div>
+            <div class="skills-container">
+              <img src="/img/icons/figma.svg" alt="Figma" class="skills-img" />
+              <p class="txt-m">Figma</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="container contact" data-aos="fade-up" data-aos-delay="100">
+          <h2 id="contact">Let's Get In Touch</h2>
+          <p class="txt-m contact-desc">
+            Open to new opportunities and always happy to connect — send me a
+            message!
+          </p>
+          <div class="contact-container">
+            <div class="contact-info">
+              <img src="../img/icons/email.svg" alt="Whatsapp" />
+              <a
+                href="mailto:daryna.pavlenk007@gmail.com"
+                class="txt-s underscore-anim"
+                >daryna.pavlenk007@gmail.com</a
+              >
+            </div>
+            <div class="contact-info">
+              <img src="../img/icons/tel.svg" alt="Whatsapp" />
+              <a href="tel:+380988252112" class="txt-s underscore-anim"
+                >+(380)98-8252-112</a
+              >
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a
+              href="https://www.linkedin.com/in/daryna-pavlenko/"
+              target="_blank"
+              ><img
+                src="../img/icons/linkedin.svg"
+                alt="Linkedin"
+                class="contact-icon"
+            /></a>
+            <a href="https://github.com/darp314" target="_blank">
+              <img
+                src="../img/icons/github.svg"
+                alt="Github"
+                class="contact-icon"
+            /></a>
+            <a href="https://t.me/odrryl" target="_blank">
+              <img
+                src="../img/icons/telegram.svg"
+                alt="Telegram"
+                class="contact-icon"
+            /></a>
+            <a href="https://wa.me/+380988252112" target="_blank">
+              <img
+                src="../img/icons/whatsapp.svg"
+                alt="Whatsapp"
+                class="contact-icon"
+            /></a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="container footer">
+         <a href="../">
+        <img src="../img/icons/logo-full.svg" alt="Logo" />
+      </a>
+      <p class="txt-s footer-copyright">
+        &copy; Copyright <span id="copyright-year"></span>. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

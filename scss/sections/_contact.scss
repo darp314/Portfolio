@@ -1,0 +1,52 @@
+.contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 150rem;
+  padding-bottom: 50rem;
+
+  &-desc {
+    margin-top: 15rem;
+    max-width: 550rem;
+    margin-bottom: 50rem;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20rem;
+    margin-bottom: 50rem;
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+  }
+
+  &-socials {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+  }
+
+  &-icon {
+    width: 30px;
+    height: 30px;
+    transition: var(--transition);
+
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+
+  @include tablet {
+    padding-top: 100rem;
+  }
+
+  @include mobile {
+    padding-top: 80rem;
+  }
+}

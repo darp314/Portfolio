@@ -1,0 +1,179 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: var(--transition-header);
+  z-index: 1000;
+  background: #050505ee;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+
+  @include tablet {
+    transform: none !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30rem;
+  padding-bottom: 30rem;
+}
+
+.action-wrapper {
+  @include tablet {
+    display: none;
+  }
+}
+
+.nav {
+  @include tablet {
+    margin-left: auto;
+  }
+  &-backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.35s ease,
+      visibility 0.35s ease;
+    cursor: pointer;
+
+    @include tablet {
+      display: block;
+    }
+
+    &._active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    gap: 30rem;
+    z-index: 1001;
+    font-size: 20rem;
+    font-weight: 500;
+    transition: var(--transition);
+
+    @include tablet {
+      z-index: 1001;
+      position: fixed;
+      width: min(240rem);
+      height: 100%;
+      flex-direction: column;
+      left: 0;
+      top: 0;
+      background: var(--secondary);
+      align-items: start;
+      justify-content: center;
+      padding: 40rem;
+      gap: 20rem;
+      font-size: 20rem;
+      transform: translateX(-105%);
+      box-shadow: 12rem 0 40rem rgba(0, 0, 0, 0.35);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @include mobile {
+      width: 60%;
+      font-size: 16rem;
+    }
+
+    &._active {
+      transform: translateX(0);
+    }
+  }
+
+  &-link:hover {
+    color: var(--accent);
+  }
+
+  &-link {
+    transition: var(--transition);
+
+    &._current {
+      color: var(--accent);
+    }
+  }
+}
+
+// ===================== BURGER =====================
+
+.burger {
+  display: none;
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  cursor: pointer;
+  z-index: 1001;
+  background: none;
+  border: 0;
+  padding: 0;
+
+  @include tablet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-box {
+    position: relative;
+    width: 30rem;
+    height: 20rem;
+  }
+
+  &-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    border-radius: 2rem;
+    background: var(--primary);
+    transition:
+      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.25s ease,
+      top 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 8rem;
+    }
+    &:nth-child(3) {
+      top: 16rem;
+    }
+  }
+
+  // burger menu animation
+  &._active {
+    .burger-line:nth-child(1) {
+      top: 8rem;
+      transform: rotate(45deg);
+    }
+    .burger-line:nth-child(2) {
+      opacity: 0;
+    }
+    .burger-line:nth-child(3) {
+      top: 8rem;
+      transform: rotate(-45deg);
+    }
+  }
+}

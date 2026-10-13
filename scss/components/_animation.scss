@@ -1,0 +1,38 @@
+// SIMPLE BUTTON ANIM
+.slide-anim:hover{
+    transform: translateX(30px);
+}
+
+// UNDERSCORE SLIDE ANIM
+.underscore-anim {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+// COMPANIES ENDLESS SCROLL
+  @keyframes workExperienceScroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(-1 * var(--marquee-distance)), 0, 0);
+  }
+}

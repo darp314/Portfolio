@@ -1,0 +1,17 @@
+.preview {
+  margin-top: 30rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 70rem;
+      z-index: 5;
+
+  &-title {
+    font-weight: 500;
+    max-width: 655rem;
+    text-align: center;
+ 
+  }
+}

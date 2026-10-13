@@ -1,0 +1,84 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 150rem;
+  gap: 80rem;
+
+  &-info {
+    flex: 3 1 0; // 60%
+    min-width: 0;
+    z-index: 5;
+  }
+
+  &-info > * {
+    max-width: 700rem;
+  }
+
+  &-title {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    z-index: 5;
+  }
+
+  &-desc {
+    margin: 40rem 0rem;
+  }
+
+  &-image {
+    display: block;
+    flex: 2 1 0; // 40%
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @include tablet {
+    gap: 40rem;
+    padding-bottom: 100rem;
+
+    &-info > * {
+      max-width: 550rem;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column-reverse;
+    gap: 40rem;
+    padding-bottom: 80rem;
+
+    &-info {
+      flex: 0 0 auto;
+      width: 100%;
+      text-align: center;
+    }
+
+    &-image {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 200rem;
+    }
+
+    &-info {
+      flex: 0 0 auto;
+      width: 80%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-desc {
+      max-width: 90%;
+      margin-inline: auto;
+      text-align: center;
+    }
+  }
+
+  @include mobile-small {
+    &-info {
+      width: 100%;
+    }
+  }
+}

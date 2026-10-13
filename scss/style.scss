@@ -1,0 +1,30 @@
+// vendors
+@import "vendors/reset";
+
+// utils
+@import "utils/vars";
+@import "utils/mixins";
+
+// layout
+@import "layout/base";
+@import "layout/scroll";
+@import "layout/header";
+@import "layout/footer";
+
+// components
+@import "components/animation";
+
+//main-sections
+@import "sections/preview";
+@import "sections/hero";
+@import "sections/services";
+@import "sections/projects";
+@import "sections/experience";
+@import "sections/contact";
+
+//about-me-sections
+@import "pages/about-me/hero";
+@import "pages/about-me/skills";
+
+//my-works-sections
+@import "pages/my-works/portfolio";

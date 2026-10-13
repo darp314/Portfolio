@@ -1,0 +1,93 @@
+.projects {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 150rem;
+  text-align: center;
+
+  &-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 240px)"}, 1fr));
+    gap: 80rem;
+    width: 100%;
+    align-items: stretch;
+    margin: 50rem 0rem;
+  }
+
+  &-container {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border-bottom: 3px solid var(--accent);
+    padding: 20rem;
+    overflow: hidden;
+    background: var(--secondary);
+    text-align: start;
+  }
+
+  &-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 30rem;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transform: scale(1);
+      transition: var(--transition);
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &-stack {
+    letter-spacing: 0.01em;
+  }
+
+  &-link {
+    margin-top: auto;
+    padding-top: 18rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+
+  @include desktop-small{
+      &-wrap {
+     gap: 40rem;
+    }
+  }
+  @include tablet {
+    padding-bottom: 100rem;
+
+    
+  }
+
+  @include mobile {
+    padding-bottom: 80rem;
+
+     &-wrap {
+      margin-top: 20rem;
+    }
+  }
+}
