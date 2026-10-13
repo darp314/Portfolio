@@ -283,7 +283,7 @@ a {
 .secondary {
   box-sizing: border-box;
   align-items: center;
-  padding-top: calc(var(--header-h, 30px) + clamp(10px, 8vh, 30px));
+  padding-top: calc(var(--header-h, 30px) + clamp(10px, 8vh, 10px));
   padding-bottom: clamp(32px, 6vh, 64px); }
 
 .intro.intro-active {
@@ -553,7 +553,7 @@ html.intro-locked {
   @media (max-width: 680px) {
     .hero {
       flex-direction: column-reverse;
-      gap: 40rem;
+      gap: 20rem;
       padding-bottom: 80rem; }
       .hero-info {
         flex: 0 0 auto;

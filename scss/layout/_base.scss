@@ -199,7 +199,7 @@ a {
 .secondary {
   box-sizing: border-box;
   align-items: center;
-  padding-top: calc(var(--header-h, 30px) + clamp(10px, 8vh, 30px));
+  padding-top: calc(var(--header-h, 30px) + clamp(10px, 8vh, 10px));
 padding-bottom: clamp(32px, 6vh, 64px);
 }
 
