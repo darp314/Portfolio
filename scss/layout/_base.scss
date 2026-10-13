@@ -199,8 +199,12 @@ a {
 .secondary {
   box-sizing: border-box;
   align-items: center;
-  padding-top: calc(var(--header-h, 30px) + clamp(10px, 8vh, 10px));
+  padding-top: calc(var(--header-h, 30px) + clamp(30px, 10vh, 60px));
 padding-bottom: clamp(32px, 6vh, 64px);
+
+@include mobile{
+  padding-top: calc(var(--header-h, 30px) + clamp(5px, 8vh, 10px));
+}
 }
 
 .intro.intro-active {
