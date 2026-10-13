@@ -185,39 +185,32 @@ a {
   margin-right: 82rem;
 }
 
-// PREVIEW ("About Me"): full screen, centered between header and bottom of screen.
 .primary {
   box-sizing: border-box;
   min-height: 100vh;
   min-height: 100svh;
-  padding-block: var(--header-h, 30px);
+  // padding-block: var(--header-h, 30px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 
-// HERO: normal-height section. No min-height, so the rest of the page follows
-// right after it. The top padding clears the header and gives it breathing room,
-// so it looks centered on any screen size.
-
 .secondary {
   box-sizing: border-box;
   align-items: center;
-  padding-top: calc(var(--header-h, 30px) + clamp(30px, 10vh, 60px));
-  padding-bottom: clamp(32px, 6vh, 64px);
+  padding-top: calc(var(--header-h, 30px) + clamp(10px, 8vh, 30px));
+padding-bottom: clamp(32px, 6vh, 64px);
 }
 
-// Only applied when JS is running (and reduced-motion is off),
-// so without JS the sections just display normally one after another.
 .intro.intro-active {
   display: grid;
-  align-items: start; // hero stays pinned to the top of the shared cell
-  overflow: clip; // nothing leaks out during the transition
+  align-items: start;
+  overflow: clip;
 
   > .primary,
   > .secondary {
-    grid-area: 1 / 1; // stack both in the same cell
+    grid-area: 1 / 1;
     width: 100%;
     will-change: opacity, transform;
   }
@@ -228,19 +221,13 @@ a {
   }
 
   > .primary.is-hidden {
-    visibility: hidden; // CV button can't be clicked when hidden
+    visibility: hidden;
   }
-
-  // Added by JS when the transition has finished: the preview leaves the layout,
-  // so the intro is only as tall as the hero and the next section follows normally.
   &.intro-done > .primary {
     display: none;
   }
 }
 
-// While the intro is capturing scroll, the page itself can't scroll natively.
-// This is what stops fast flicks / touch swipes from slipping past the transition.
-// (The gutter keeps the layout from shifting when the scrollbar disappears.)
 html {
   scrollbar-gutter: stable;
 }

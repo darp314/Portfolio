@@ -275,7 +275,6 @@ a {
   box-sizing: border-box;
   min-height: 100vh;
   min-height: 100svh;
-  padding-block: var(--header-h, 30px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -284,7 +283,7 @@ a {
 .secondary {
   box-sizing: border-box;
   align-items: center;
-  padding-top: calc(var(--header-h, 30px) + clamp(30px, 10vh, 60px));
+  padding-top: calc(var(--header-h, 30px) + clamp(10px, 8vh, 30px));
   padding-bottom: clamp(32px, 6vh, 64px); }
 
 .intro.intro-active {
@@ -574,7 +573,8 @@ html.intro-locked {
       .hero-desc {
         max-width: 90%;
         margin-inline: auto;
-        text-align: center; } }
+        text-align: center;
+        margin: 20rem 0rem; } }
   @media (max-width: 460px) {
     .hero-info {
       width: 100%; } }
