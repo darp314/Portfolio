@@ -821,7 +821,7 @@ html.intro-locked {
   @media (max-width: 680px) {
     .hero-var2 {
       flex-direction: column;
-      gap: 40rem;
+      gap: 20rem;
       padding-bottom: 80rem; } }
 
 .skills {
