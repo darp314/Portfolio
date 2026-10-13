@@ -102,16 +102,17 @@ window.addEventListener('resize', () => {
 document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
 // ===================== CV DOWNLOAD =====================
- function downloadCV() {
-	var cvUrl = new URL("cv/Pavlenko_Daryna_CV.pdf", window.location.origin + "/").href;
-	var link = document.createElement("a");
-	link.href = cvUrl;
-	link.download = "Pavlenko_Daryna_CV.pdf";
-	document.body.appendChild(link);
-	link.click();
-	document.body.removeChild(link);
-}
+const SCRIPT_BASE = document.currentScript.src; // captured at load time
 
+function downloadCV() {
+  const cvUrl = new URL("cv/Pavlenko_Daryna_CV.pdf", SCRIPT_BASE).href;
+  const link = document.createElement("a");
+  link.href = cvUrl;
+  link.download = "Pavlenko_Daryna_CV.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
 // ===================== LOAD MORE BTN =====================
 (function () {
